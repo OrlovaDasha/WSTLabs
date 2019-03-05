@@ -9,12 +9,12 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * <p>Java class for getFilmsByFields complex type.
+ * <p>Java class for findFilms complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="getFilmsByFields">
+ * &lt;complexType name="findFilms">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
@@ -32,14 +32,14 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "getFilmsByFields", propOrder = {
+@XmlType(name = "findFilms", propOrder = {
     "filmName",
     "director",
     "country",
     "dateOfStart",
     "duration"
 })
-public class GetFilmsByFields {
+public class FindFilms {
 
     protected String filmName;
     protected String director;

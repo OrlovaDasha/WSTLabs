@@ -10,12 +10,12 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for getFilmsByFieldsResponse complex type.
+ * <p>Java class for findFilmsResponse complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="getFilmsByFieldsResponse">
+ * &lt;complexType name="findFilmsResponse">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
@@ -29,10 +29,10 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "getFilmsByFieldsResponse", propOrder = {
+@XmlType(name = "findFilmsResponse", propOrder = {
     "_return"
 })
-public class GetFilmsByFieldsResponse {
+public class FindFilmsResponse {
 
     @XmlElement(name = "return")
     protected List<Film> _return;

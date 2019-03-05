@@ -11,7 +11,7 @@ public class FilmServiceClient {
     public static void main(String[] args) throws MalformedURLException {
         URL url = new URL("http://localhost:8081/FilmService?wsdl");
         FilmWebServiceService filmWebService = new FilmWebServiceService(url);
-        List<Film> films = filmWebService.getFilmServicePort().getFilmsByFields(null, null, null , null, null);
+        List<Film> films = filmWebService.getFilmServicePort().findFilms(null, null, null, null, null);
         for (Film film : films) {
             System.out.println(film.toString());
         }

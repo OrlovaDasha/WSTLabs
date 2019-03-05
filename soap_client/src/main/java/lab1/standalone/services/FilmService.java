@@ -38,10 +38,10 @@ public interface FilmService {
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getFilmsByFields", targetNamespace = "http://services.standalone.lab1/", className = "lab1.standalone.services.GetFilmsByFields")
-    @ResponseWrapper(localName = "getFilmsByFieldsResponse", targetNamespace = "http://services.standalone.lab1/", className = "lab1.standalone.services.GetFilmsByFieldsResponse")
-    @Action(input = "http://services.standalone.lab1/FilmService/getFilmsByFieldsRequest", output = "http://services.standalone.lab1/FilmService/getFilmsByFieldsResponse")
-    public List<Film> getFilmsByFields(
+    @RequestWrapper(localName = "findFilms", targetNamespace = "http://services.standalone.lab1/", className = "lab1.standalone.services.FindFilms")
+    @ResponseWrapper(localName = "findFilmsResponse", targetNamespace = "http://services.standalone.lab1/", className = "lab1.standalone.services.FindFilmsResponse")
+    @Action(input = "http://services.standalone.lab1/FilmService/findFilmsRequest", output = "http://services.standalone.lab1/FilmService/findFilmsResponse")
+    public List<Film> findFilms(
         @WebParam(name = "filmName", targetNamespace = "")
         String filmName,
         @WebParam(name = "director", targetNamespace = "")

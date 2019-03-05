@@ -24,8 +24,8 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _GetFilmsByFields_QNAME = new QName("http://services.standalone.lab1/", "getFilmsByFields");
-    private final static QName _GetFilmsByFieldsResponse_QNAME = new QName("http://services.standalone.lab1/", "getFilmsByFieldsResponse");
+    private final static QName _FindFilmsResponse_QNAME = new QName("http://services.standalone.lab1/", "findFilmsResponse");
+    private final static QName _FindFilms_QNAME = new QName("http://services.standalone.lab1/", "findFilms");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: lab1.standalone.services
@@ -35,19 +35,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link GetFilmsByFields }
+     * Create an instance of {@link FindFilmsResponse }
      * 
      */
-    public GetFilmsByFields createGetFilmsByFields() {
-        return new GetFilmsByFields();
+    public FindFilmsResponse createFindFilmsResponse() {
+        return new FindFilmsResponse();
     }
 
     /**
-     * Create an instance of {@link GetFilmsByFieldsResponse }
+     * Create an instance of {@link FindFilms }
      * 
      */
-    public GetFilmsByFieldsResponse createGetFilmsByFieldsResponse() {
-        return new GetFilmsByFieldsResponse();
+    public FindFilms createFindFilms() {
+        return new FindFilms();
     }
 
     /**
@@ -59,21 +59,21 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetFilmsByFields }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link FindFilmsResponse }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://services.standalone.lab1/", name = "getFilmsByFields")
-    public JAXBElement<GetFilmsByFields> createGetFilmsByFields(GetFilmsByFields value) {
-        return new JAXBElement<GetFilmsByFields>(_GetFilmsByFields_QNAME, GetFilmsByFields.class, null, value);
+    @XmlElementDecl(namespace = "http://services.standalone.lab1/", name = "findFilmsResponse")
+    public JAXBElement<FindFilmsResponse> createFindFilmsResponse(FindFilmsResponse value) {
+        return new JAXBElement<FindFilmsResponse>(_FindFilmsResponse_QNAME, FindFilmsResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetFilmsByFieldsResponse }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link FindFilms }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://services.standalone.lab1/", name = "getFilmsByFieldsResponse")
-    public JAXBElement<GetFilmsByFieldsResponse> createGetFilmsByFieldsResponse(GetFilmsByFieldsResponse value) {
-        return new JAXBElement<GetFilmsByFieldsResponse>(_GetFilmsByFieldsResponse_QNAME, GetFilmsByFieldsResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://services.standalone.lab1/", name = "findFilms")
+    public JAXBElement<FindFilms> createFindFilms(FindFilms value) {
+        return new JAXBElement<FindFilms>(_FindFilms_QNAME, FindFilms.class, null, value);
     }
 
 }

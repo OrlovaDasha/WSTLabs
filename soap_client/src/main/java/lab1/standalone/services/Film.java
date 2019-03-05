@@ -160,14 +160,4 @@ public class Film {
         this.name = value;
     }
 
-    @Override
-    public String toString() {
-        return "Film{" +
-                "country='" + country + '\'' +
-                ", dateOfStart=" + dateOfStart +
-                ", director='" + director + '\'' +
-                ", duration=" + duration +
-                ", name='" + name + '\'' +
-                '}';
-    }
 }

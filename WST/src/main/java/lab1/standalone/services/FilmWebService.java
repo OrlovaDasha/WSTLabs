@@ -16,7 +16,7 @@ public class FilmWebService {
     private final static FilmDAO filmDao = new StandaloneFilmDAO();
 
     @WebMethod
-    public List<Film> getFilmsByFields(@WebParam(name = "filmName") String name,
+    public List<Film> findFilms(@WebParam(name = "filmName") String name,
                                        @WebParam(name = "director") String director,
                                        @WebParam(name = "country") String country,
                                        @WebParam(name = "dateOfStart") Date date,
