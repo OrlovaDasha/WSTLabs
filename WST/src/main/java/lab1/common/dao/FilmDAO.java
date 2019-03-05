@@ -1,11 +1,15 @@
 package lab1.common.dao;
 
 import lab1.common.beans.Film;
-import lab1.standalone.utils.ConnectionUtil;
 
-import java.sql.*;
-import java.util.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Date;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -44,16 +48,17 @@ public abstract class FilmDAO {
             notFirstField = addChecking(dateOfStart, "dateOfStart", notFirstField, query);
             addChecking(duration, "duration", notFirstField, query);
 
-            PreparedStatement stmt = connection.prepareStatement(query.toString());
-            ResultSet rs = stmt.executeQuery();
-            films = extractFilmsFromResultSet(rs);
+            try (PreparedStatement stmt = connection.prepareStatement(query.toString());
+                 ResultSet rs = stmt.executeQuery()) {
+                films = extractFilmsFromResultSet(rs);
+            }
         } catch (SQLException ex) {
             Logger.getLogger(FilmDAO.class.getName()).log(Level.SEVERE, null, ex);
         }
         return films;
     }
 
-    private List<Film> extractFilmsFromResultSet(ResultSet rs) throws SQLException{
+    private List<Film> extractFilmsFromResultSet(ResultSet rs) throws SQLException {
         List<Film> films = new ArrayList<Film>();
         while (rs.next()) {
             String name = rs.getString("name");
@@ -64,6 +69,7 @@ public abstract class FilmDAO {
 
             Film film = new Film(name, date, country, duration, director);
             films.add(film);
-        } return films;
+        }
+        return films;
     }
 }
