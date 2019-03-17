@@ -37,21 +37,21 @@ public abstract class FilmDAO {
     public List<Film> getDataByFields(String name, String director, String country, Date dateOfStart, Double duration) {
         List<Film> films = Collections.emptyList();
         try (Connection connection = getConnection()) {
-            StringBuilder query = new StringBuilder("select * from films");
-            boolean notFirstField = false;
-            if (name != null || director != null || country != null && dateOfStart != null || duration != null) {
-                query.append(" where ");
-            }
-            notFirstField = addChecking(name, "name", notFirstField, query);
-            notFirstField = addChecking(director, "director", notFirstField, query);
-            notFirstField = addChecking(country, "country", notFirstField, query);
-            notFirstField = addChecking(dateOfStart, "dateOfStart", notFirstField, query);
-            addChecking(duration, "duration", notFirstField, query);
+                StringBuilder query = new StringBuilder("select * from films");
+                boolean notFirstField = false;
+                if (name != null || director != null || country != null && dateOfStart != null || duration != null) {
+                    query.append(" where ");
+                }
+                notFirstField = addChecking(name, "name", notFirstField, query);
+                notFirstField = addChecking(director, "director", notFirstField, query);
+                notFirstField = addChecking(country, "country", notFirstField, query);
+                notFirstField = addChecking(dateOfStart, "dateOfStart", notFirstField, query);
+                addChecking(duration, "duration", notFirstField, query);
 
-            try (PreparedStatement stmt = connection.prepareStatement(query.toString());
-                 ResultSet rs = stmt.executeQuery()) {
-                films = extractFilmsFromResultSet(rs);
-            }
+                try (PreparedStatement stmt = connection.prepareStatement(query.toString());
+                     ResultSet rs = stmt.executeQuery()) {
+                    films = extractFilmsFromResultSet(rs);
+                }
         } catch (SQLException ex) {
             Logger.getLogger(FilmDAO.class.getName()).log(Level.SEVERE, null, ex);
         }
