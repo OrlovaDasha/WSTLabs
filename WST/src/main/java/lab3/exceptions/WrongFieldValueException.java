@@ -6,7 +6,7 @@ import javax.xml.ws.WebFault;
 public class WrongFieldValueException extends Exception {
     private FilmServiceFault filmServiceFault;
 
-    private static final String MESSAGE_TEMPLATE = "The field % value must be %s";
+    private static final String MESSAGE_TEMPLATE = "The field %s value must be %s";
 
     public WrongFieldValueException(String fieldName, String possibleValues, FilmServiceFault fault) {
         super(String.format(MESSAGE_TEMPLATE, fieldName, possibleValues));
