@@ -57,7 +57,7 @@ public class FilmDao {
         addUpdatedValues(country, "country", query);
         addUpdatedValues(dateOfStart, "datepfstart", query);
         addUpdatedValues(duration, "duration", query);
-        query.replace(query.lastIndexOf("."), query.length(), " ");
+        query.replace(query.lastIndexOf(","), query.length(), " ");
         query.append(" where id = " + id);
         try (Connection connection = ConnectionUtil.getConnection();) {
             try (PreparedStatement preparedStmt = connection.prepareStatement(query.toString())) {
