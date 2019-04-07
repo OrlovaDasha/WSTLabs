@@ -14,7 +14,7 @@ import java.util.Date;
 import java.util.List;
 
 @Path("/films")
-@Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
+@Produces({MediaType.APPLICATION_JSON})
 public class FilmResource {
 
     private final static FilmDAO filmDao = new StandaloneFilmDAO();
