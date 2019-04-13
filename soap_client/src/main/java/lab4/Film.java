@@ -14,7 +14,7 @@ public class Film {
     public Film() {
     }
 
-    public Film(String name, Date date, String country, double duration, String director) {
+    public Film(String name, Date date, String country, Double duration, String director) {
         this.name = name;
         this.dateOfStart = date;
         this.country = country;
