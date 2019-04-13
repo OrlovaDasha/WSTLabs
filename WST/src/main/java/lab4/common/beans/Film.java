@@ -8,7 +8,7 @@ public class Film {
     private String name;
     private Date dateOfStart;
     private String country;
-    private double duration;
+    private Double duration;
     private String director;
 
     public Film() {
