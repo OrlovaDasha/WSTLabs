@@ -1,5 +1,5 @@
 
-package withauth;
+package withauth.soap.generated;
 
 import java.util.List;
 import javax.jws.WebMethod;
@@ -36,8 +36,8 @@ public interface FilmService {
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "deleteFilm", targetNamespace = "http://withAuth/", className = "withauth.DeleteFilm")
-    @ResponseWrapper(localName = "deleteFilmResponse", targetNamespace = "http://withAuth/", className = "withauth.DeleteFilmResponse")
+    @RequestWrapper(localName = "deleteFilm", targetNamespace = "http://withAuth/", className = "withauth.soap.generated.DeleteFilm")
+    @ResponseWrapper(localName = "deleteFilmResponse", targetNamespace = "http://withAuth/", className = "withauth.soap.generated.DeleteFilmResponse")
     @Action(input = "http://withAuth/FilmService/deleteFilmRequest", output = "http://withAuth/FilmService/deleteFilmResponse")
     public String deleteFilm(
         @WebParam(name = "login", targetNamespace = "")
@@ -62,8 +62,8 @@ public interface FilmService {
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "updateFilm", targetNamespace = "http://withAuth/", className = "withauth.UpdateFilm")
-    @ResponseWrapper(localName = "updateFilmResponse", targetNamespace = "http://withAuth/", className = "withauth.UpdateFilmResponse")
+    @RequestWrapper(localName = "updateFilm", targetNamespace = "http://withAuth/", className = "withauth.soap.generated.UpdateFilm")
+    @ResponseWrapper(localName = "updateFilmResponse", targetNamespace = "http://withAuth/", className = "withauth.soap.generated.UpdateFilmResponse")
     @Action(input = "http://withAuth/FilmService/updateFilmRequest", output = "http://withAuth/FilmService/updateFilmResponse")
     public String updateFilm(
         @WebParam(name = "login", targetNamespace = "")
@@ -97,8 +97,8 @@ public interface FilmService {
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "insertFilm", targetNamespace = "http://withAuth/", className = "withauth.InsertFilm")
-    @ResponseWrapper(localName = "insertFilmResponse", targetNamespace = "http://withAuth/", className = "withauth.InsertFilmResponse")
+    @RequestWrapper(localName = "insertFilm", targetNamespace = "http://withAuth/", className = "withauth.soap.generated.InsertFilm")
+    @ResponseWrapper(localName = "insertFilmResponse", targetNamespace = "http://withAuth/", className = "withauth.soap.generated.InsertFilmResponse")
     @Action(input = "http://withAuth/FilmService/insertFilmRequest", output = "http://withAuth/FilmService/insertFilmResponse")
     public String insertFilm(
         @WebParam(name = "login", targetNamespace = "")
@@ -124,12 +124,12 @@ public interface FilmService {
      * @param dateOfStart
      * @param filmName
      * @return
-     *     returns java.util.List<withauth.Film>
+     *     returns java.util.List<withauth.soap.generated.Film>
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "findFilms", targetNamespace = "http://withAuth/", className = "withauth.FindFilms")
-    @ResponseWrapper(localName = "findFilmsResponse", targetNamespace = "http://withAuth/", className = "withauth.FindFilmsResponse")
+    @RequestWrapper(localName = "findFilms", targetNamespace = "http://withAuth/", className = "withauth.soap.generated.FindFilms")
+    @ResponseWrapper(localName = "findFilmsResponse", targetNamespace = "http://withAuth/", className = "withauth.soap.generated.FindFilmsResponse")
     @Action(input = "http://withAuth/FilmService/findFilmsRequest", output = "http://withAuth/FilmService/findFilmsResponse")
     public List<Film> findFilms(
         @WebParam(name = "filmName", targetNamespace = "")

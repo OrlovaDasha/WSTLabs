@@ -1,5 +1,5 @@
 
-package withauth;
+package withauth.soap.generated;
 
 import java.net.MalformedURLException;
 import java.net.URL;

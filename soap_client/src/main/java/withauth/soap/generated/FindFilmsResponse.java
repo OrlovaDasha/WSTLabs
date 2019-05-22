@@ -1,5 +1,5 @@
 
-package withauth;
+package withauth.soap.generated;
 
 import java.util.ArrayList;
 import java.util.List;

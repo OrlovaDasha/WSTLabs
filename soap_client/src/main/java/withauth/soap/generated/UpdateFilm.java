@@ -1,5 +1,5 @@
 
-package withauth;
+package withauth.soap.generated;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -10,18 +10,19 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * <p>Java class for insertFilm complex type.
+ * <p>Java class for updateFilm complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="insertFilm">
+ * &lt;complexType name="updateFilm">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="login" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="password" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="filmName" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="filmId" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="filmName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="director" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="country" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="dateOfStart" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
@@ -35,22 +36,23 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "insertFilm", propOrder = {
+@XmlType(name = "updateFilm", propOrder = {
     "login",
     "password",
+    "filmId",
     "filmName",
     "director",
     "country",
     "dateOfStart",
     "duration"
 })
-public class InsertFilm {
+public class UpdateFilm {
 
     @XmlElement(required = true)
     protected String login;
     @XmlElement(required = true)
     protected String password;
-    @XmlElement(required = true)
+    protected int filmId;
     protected String filmName;
     protected String director;
     protected String country;
@@ -104,6 +106,22 @@ public class InsertFilm {
      */
     public void setPassword(String value) {
         this.password = value;
+    }
+
+    /**
+     * Gets the value of the filmId property.
+     * 
+     */
+    public int getFilmId() {
+        return filmId;
+    }
+
+    /**
+     * Sets the value of the filmId property.
+     * 
+     */
+    public void setFilmId(int value) {
+        this.filmId = value;
     }
 
     /**

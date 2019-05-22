@@ -1,5 +1,5 @@
 
-package withauth;
+package withauth.soap.generated;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -8,12 +8,12 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for deleteFilmResponse complex type.
+ * <p>Java class for insertFilmResponse complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="deleteFilmResponse">
+ * &lt;complexType name="insertFilmResponse">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
@@ -27,10 +27,10 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "deleteFilmResponse", propOrder = {
+@XmlType(name = "insertFilmResponse", propOrder = {
     "_return"
 })
-public class DeleteFilmResponse {
+public class InsertFilmResponse {
 
     @XmlElement(name = "return")
     protected String _return;

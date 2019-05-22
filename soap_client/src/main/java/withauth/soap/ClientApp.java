@@ -1,11 +1,9 @@
-package withauth;
+package withauth.soap;
 
-import javax.xml.ws.BindingProvider;
-import javax.xml.ws.handler.MessageContext;
+import withauth.soap.generated.FilmWebCrudServiceService;
+
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.HashMap;
-import java.util.Map;
 
 public class ClientApp {
 
