@@ -1,4 +1,4 @@
-package withAuth;
+package withAuth.soap;
 
 import lab1.standalone.services.FilmWebService;
 import lab2.FilmDao;
